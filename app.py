@@ -174,7 +174,7 @@ chart = alt.Chart(plot).mark_line(interpolate="monotone").encode(
     x=alt.X("fecha:T", title="Fecha"),
     y=alt.Y("valor:Q", title="Monto"),
     color=alt.Color("serie:N", title="Serie"),
-    tooltip=[alt.Tooltip("fecha:T","Fecha"), alt.Tooltip("serie:N","Serie"), alt.Tooltip("valor:Q","Valor", format=",.2f")]
+    tooltip=[alt.Tooltip("fecha:T", title="Fecha"), alt.Tooltip("serie:N", title="Serie"), alt.Tooltip("valor:Q", title="Valor", format=",.2f")]
 ).properties(height=460)
 st.altair_chart(chart, use_container_width=True)
 
